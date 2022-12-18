@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+@font-face {
+    font-family: 'poppinsblack';
+    src: url('../components/fonts/poppins-black-webfont.woff2') format('woff2'),
+        url('../components/fonts/poppins-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #24252a !important;
+    font-family: 'poppinsblack', 'Inter', sans-serif;;
+}
+
+header {
+    background-color: #24252a;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.9rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.5rem !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+}
+
+.login-button button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    background-color: #927ce2;
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
+}
+
+/* container carrosel*/
+
+.container{
+    position: relative;
+    overflow: hidden;
+    width: 40% !important; /* Colocar na media query */
+    height: 100vh !important;
+    display: flex !important;
+    margin-left: 100px !important;
+    margin-top: 100px !important;
+}
+
+.container .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700%;
+    height: 50%;
+    float: left;
+    animation: animate 30s linear infinite;
+    display: flex;
+}
+
+.container .slider.roger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 50%;
+    float: left;
+    animation: animate2 20s linear infinite;
+    display: flex;
+}
+
+
+.container .slider .slide{
+    position: relative;
+    width: 20%;
+    height: 100%;
+    float: left;
+    border-radius: 30px;
+}
+
+.container .slider .slide .caption{
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    right: 60px;
+    padding: 30px;
+}
+
+
+.container .slider .slide1{
+    background-image: url(../images/image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide2{
+    background-image: url(../images/image\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide3{
+    background-image: url(../images/image\ \(2\).jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide4{
+    background-image: url(../images/image\ \(3\).jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide5{
+    background-image: url(../images/image\ \(4\).jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide6{
+    background-image: url(../images/photooo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide7{
+    background-image: url(../images/photoooo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ROGER */
+
+.container .slider .slide9{
+    background-image: url(../roger/photo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide10{
+    background-image: url(../roger/photoo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide11{
+    background-image: url(../roger/roger.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .slider .slide12{
+    background-image: url(../roger/roger\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes animate{
+    0%{
+        left: 0;
+    }
+    12.5% {
+        left: -100%;
+    }
+    25%{
+        left: -200%;
+    }
+    37.5%{
+        left: -300%;
+    }
+    50%{
+        left: -400%;
+    }
+    62.5%{
+        left: -500%;
+    }
+    75%{
+        left: -600%;
+    }
+    87.5%{
+        left: -700%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes animate2{
+    0%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .container .slider .slide .caption{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        padding: 20px;
+    }
+    
+    .container .slider .slide .caption h2{
+        margin: 0 0 10px;
+        padding: 0;
+        color: #FFF;
+        font-size: 30px;
+    }
+    
+    .container .slider .slide .caption p{
+        font-size: 18px;
+    }
+}
+
+.titulo:hover{
+    color: #7e62e2;
+}
+
+.nav-link:hover{
+    color: #927ce2 !important;
+}
+
+.titulo{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.card-text{
+    font-size: 1.1rem !important;
+    padding-top: 5px !important;
+    color: #FFF;
+}
+
+.card-title{
+    color: #FFF;
+    font-size: 1.5rem
+}
+
+.card-body{
+    background-color: #24252a !important;
+    padding: 0;
+}
+
+.card-title:hover{
+    color: #927ce2;
+}
+
+/* carrosel 2*/
+
+.carousel-inner{
+    position: relative;
+    overflow: hidden;
+    width: 50% !important;
+    height: 100% !important;
+    display: flex !important;
+    margin-left: 100px !important;
+    margin-top: 100px !important;
+}
+
+.container-2 {
+    display: flex; /* Coloca como pai de dois sliders */
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
